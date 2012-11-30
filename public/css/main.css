@@ -93,6 +93,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.prettyprint{
+    float: left;
+    white-space:nowrap;
+}
 
 
 
