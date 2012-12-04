@@ -25,12 +25,12 @@
 
         <!-- Add your site or application content here -->
         
-		<div class="container" role="main">
+		<div class="container">
 			<div class="navbar" >
 				<div class="navbar-inner">
 					<a class="brand" href="../index.html">ARIA Demo</a>
-					<div>
-						<ul class="nav" role="navigation">
+					<div role="navigation" aria-label="Main">
+						<ul class="nav" >
                             <li><a href="best-practices.html">Best Practices</a></li>
 							<li><a href="roles.html">Roles</a></li>
 							<li><a href="live-regions.html">Live Regions</a></li>
@@ -39,131 +39,133 @@
 					</div>
 				</div>
 			</div>
-            <button class="btn btn-danger remove-code pull-right">Remove Code</button>
-			<h1>Roles</h1>
-			<p>ARIA Roles allows declaration of widgets and page structures.  The following are some examples (also the navigation bar and the "main" container on the page).</p>
-            <div class="page-header">
-                <h2>Landmark Roles</h2>
-            </div>
-            <div class="section">
-                <h3>Search</h3>
-                <p>Search is declared with <code> role="search" </code>.</p>
-                <div class="row">
-                    <div class="span5">
-                        <form class="form-search" role="search">
-                            <input type="text" class="input-medium search-query">
-                            <button type="submit" class="btn">Search</button>
-                        </form>
-                    </div>
-                    <div class="span7 code-example">
-                        <div class="tabbable"> <!-- Only required for left/right tabs -->
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#search-tab1" data-toggle="tab">Basic</a></li>
-                                <li><a href="#search-tab2" data-toggle="tab">Bootstrap Example</a></li>
-                            </ul>
-                            <div class="tab-content">
-
-                                    <pre class="prettyprint linenums tab-pane active" id="search-tab1">
-<form role="search">\n
-\t<input type="text">\n
-\t<button type="submit" class="btn">Search</button>\n
-</form>
-                                    </pre>
-                                    <pre class="prettyprint linenums tab-pane" id="search-tab2">
-<form role="search"class="form-search">\n
-\t<input type="text" class="input-medium search-query">\n
-\t<button type="submit" class="btn">Search</button>\n
-</form>
-                                    </pre>
-
-                            </div>
-                        </div>
-                    </div> <!-- End of Code Example -->
+            <div role="main">
+                <button class="btn btn-danger remove-code pull-right">Remove Code</button>
+    			<h1>Roles</h1>
+    			<p>ARIA Roles allows declaration of widgets and page structures.  The following are some examples (also the navigation bar and the "main" container on the page).</p>
+                <div class="page-header">
+                    <h2>Landmark Roles</h2>
                 </div>
-            </div> <!-- End of Search Section -->
+                <div class="section">
+                    <h3>Search</h3>
+                    <p>Search is declared with <code> role="search" </code>.</p>
+                    <div class="row">
+                        <div class="span5">
+                            <form class="form-search" role="search">
+                                <input type="text" class="input-medium search-query">
+                                <button type="submit" class="btn">Search</button>
+                            </form>
+                        </div>
+                        <div class="span7 code-example">
+                            <div class="tabbable"> <!-- Only required for left/right tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#search-tab1" data-toggle="tab">Basic</a></li>
+                                    <li><a href="#search-tab2" data-toggle="tab">Bootstrap Example</a></li>
+                                </ul>
+                                <div class="tab-content">
 
-            <div class="section">
-                <h3>Navigation</h3>
-                <p>Navigation is declared with <code> role="navigation" </code>.</p>
-                <div class="row">
-                    <div class="span5" role="navigation" aria-labelledby="sidenav-heading">
-                        <p class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</p>
-                        <ul class="nav nav-list" >
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Link #1</a></li>    
-                            <li class="divider" role="presentation"></li>
-                            <li><a href="#">Link #2</a></li>
-                            <li><a href="#">Link #3</a></li>
-                        </ul>
+                                        <pre class="prettyprint linenums tab-pane active" id="search-tab1">
+    <form role="search">\n
+    \t<input type="text">\n
+    \t<button type="submit" class="btn">Search</button>\n
+    </form>
+                                        </pre>
+                                        <pre class="prettyprint linenums tab-pane" id="search-tab2">
+    <form role="search"class="form-search">\n
+    \t<input type="text" class="input-medium search-query">\n
+    \t<button type="submit" class="btn">Search</button>\n
+    </form>
+                                        </pre>
+
+                                </div>
+                            </div>
+                        </div> <!-- End of Code Example -->
                     </div>
-                    <!-- <div class="span5">
-                        <div role="navigation" aria-label="Demo">
+                </div> <!-- End of Search Section -->
+
+                <div class="section">
+                    <h3>Navigation</h3>
+                    <p>Navigation is declared with <code> role="navigation" </code>.</p>
+                    <div class="row">
+                        <div class="span5" role="navigation" aria-labelledby="sidenav-heading">
+                            <p class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</p>
                             <ul class="nav nav-list" >
-                                <li class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</li>
                                 <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">Link #1</a></li>
+                                <li><a href="#">Link #1</a></li>    
                                 <li class="divider" role="presentation"></li>
                                 <li><a href="#">Link #2</a></li>
                                 <li><a href="#">Link #3</a></li>
                             </ul>
                         </div>
-                    </div> -->
-                    <!-- <div class="span5">
-                        <nav class="nav nav-list">
-                            <a href="#">Home</a> <br>
-                            <a href="#">Link #1</a> <br>
-                            <p class="divider" role="presentation"></p>
-                            <a href="#">Link #2</a> <br>
-                            <a href="#">Link #3</a>
-                        </nav>
-                    </div> -->
-
-                    <div class="span7 code-example">
-                        <div class="tabbable"> <!-- Only required for left/right tabs -->
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#nav-tab1" data-toggle="tab">Basic</a></li>
-                                <li><a href="#nav-tab2" data-toggle="tab">Bootstrap Example</a></li>
-                            </ul>
-                            <div class="tab-content">
-
-                                    <pre class="prettyprint linenums tab-pane active" id="nav-tab1">
-<div class="span5" role="navigation" aria-labelledby="sidenav-heading">\n
-\t<p id="sidenav-heading" aria-hidden="true">SideBar</p>\n
-\t<ul class="nav nav-list" >\n
-\t\t<li class="active"><a href="#">Home</a></li>\n
-\t\t<li><a href="#">Link #1</a></li>\n
-\t\t<li class="divider" role="presentation"></li>\n
-\t\t<li><a href="#">Link #2</a></li>\n
-\t\t<li><a href="#">Link #3</a></li>\n
-\t</ul>\n
-</div>
-                                    </pre>
-                                    <pre class="prettyprint linenums tab-pane" id="nav-tab2">
-<div class="span5" role="navigation" aria-labelledby="sidenav-heading">\n
-\t<ul class="nav nav-list" >\n
-\t\t<li class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</li>\n
-\t\t<li class="active"><a href="#">Home</a></li>\n
-\t\t<li><a href="#">Link #1</a></li>\n
-\t\t<li class="divider" role="presentation"></li>\n
-\t\t<li><a href="#">Link #2</a></li>\n
-\t\t<li><a href="#">Link #3</a></li>\n
-\t</ul>\n
-</div>
-                                    </pre>
-
+                        <!-- <div class="span5">
+                            <div role="navigation" aria-label="Demo">
+                                <ul class="nav nav-list" >
+                                    <li class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</li>
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li><a href="#">Link #1</a></li>
+                                    <li class="divider" role="presentation"></li>
+                                    <li><a href="#">Link #2</a></li>
+                                    <li><a href="#">Link #3</a></li>
+                                </ul>
                             </div>
-                        </div>
-                    </div> <!-- End of Code Example -->
+                        </div> -->
+                        <!-- <div class="span5">
+                            <nav class="nav nav-list">
+                                <a href="#">Home</a> <br>
+                                <a href="#">Link #1</a> <br>
+                                <p class="divider" role="presentation"></p>
+                                <a href="#">Link #2</a> <br>
+                                <a href="#">Link #3</a>
+                            </nav>
+                        </div> -->
 
+                        <div class="span7 code-example">
+                            <div class="tabbable"> <!-- Only required for left/right tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#nav-tab1" data-toggle="tab">Basic</a></li>
+                                    <li><a href="#nav-tab2" data-toggle="tab">Bootstrap Example</a></li>
+                                </ul>
+                                <div class="tab-content">
+
+                                        <pre class="prettyprint linenums tab-pane active" id="nav-tab1">
+    <div role="navigation" aria-labelledby="sidenav-heading">\n
+    \t<p id="sidenav-heading" aria-hidden="true">SideBar</p>\n
+    \t<ul >\n
+    \t\t<li><a href="#">Home</a></li>\n
+    \t\t<li><a href="#">Link #1</a></li>\n
+    \t\t<li class="divider" role="presentation"></li>\n
+    \t\t<li><a href="#">Link #2</a></li>\n
+    \t\t<li><a href="#">Link #3</a></li>\n
+    \t</ul>\n
+    </div>
+                                        </pre>
+                                        <pre class="prettyprint linenums tab-pane" id="nav-tab2">
+    <div class="span5" role="navigation" aria-labelledby="sidenav-heading">\n
+    \t<ul class="nav nav-list" >\n
+    \t\t<li class="nav-header" id="sidenav-heading" aria-hidden="true">SideBar</li>\n
+    \t\t<li class="active"><a href="#">Home</a></li>\n
+    \t\t<li><a href="#">Link #1</a></li>\n
+    \t\t<li class="divider" role="presentation"></li>\n
+    \t\t<li><a href="#">Link #2</a></li>\n
+    \t\t<li><a href="#">Link #3</a></li>\n
+    \t</ul>\n
+    </div>
+                                        </pre>
+
+                                </div>
+                            </div>
+                        </div> <!-- End of Code Example -->
+
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="page-header">
-                <h2>Document Structure</h2>
-            </div>
-            <div class="page-header">
-                <h2>Widget Roles</h2>
+                <div class="page-header">
+                    <h2>Document Structure</h2>
+                </div>
+                <div class="page-header">
+                    <h2>Widget Roles</h2>
+                </div>
             </div>
 		</div>
         
